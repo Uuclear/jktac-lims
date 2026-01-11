@@ -165,11 +165,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# 静态文件目录（仅在目录存在时添加）
+_static_dir = BASE_DIR / 'static'
+STATICFILES_DIRS = [_static_dir] if _static_dir.exists() else []
 
 # 媒体文件配置
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+# 确保必要目录存在
+for _dir in [STATIC_ROOT, MEDIA_ROOT, BASE_DIR / 'logs']:
+    _dir.mkdir(parents=True, exist_ok=True)
 
 # ==================== DRF配置 ====================
 
