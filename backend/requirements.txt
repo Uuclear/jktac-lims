@@ -1,0 +1,39 @@
+# Django核心
+Django==4.2.16
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+django-filter==23.5
+
+# 数据库
+mysqlclient==2.2.4
+redis==5.0.1
+django-redis==5.4.0
+
+# 认证与权限
+djangorestframework-simplejwt==5.3.1
+PyJWT==2.8.0
+
+# 文件存储
+minio==7.2.3
+Pillow==10.2.0
+
+# 数据处理
+pandas==2.1.4
+openpyxl==3.1.2
+python-docx==1.1.0
+reportlab==4.0.8
+
+# OCR (可选，需要时安装)
+# paddlepaddle==2.5.2
+# paddleocr==2.7.0.3
+
+# 工具库
+python-dotenv==1.0.0
+celery==5.3.6
+gunicorn==21.2.0
+
+# 开发工具
+black==23.12.1
+flake8==7.0.0
+pytest==7.4.4
+pytest-django==4.7.0
